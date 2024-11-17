@@ -8,5 +8,11 @@ test('Has relevant content', async ({ page }) => {
 
 test('Get started link', async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('link', { name: 'Learn how to use Playwright' }).click();
+  const link = page.getByRole('link', { name: 'Learn how to use Playwright' });
+  const href = await link.getAttribute('href');
+  expect(href).toBe('https://playwright.dev/docs/intro');
+
+  // do not do this unless you control domain
+  await link.click();
+  await page.waitForURL('https://playwright.dev/docs/intro');
 });

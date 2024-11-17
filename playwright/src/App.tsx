@@ -13,7 +13,6 @@ function App() {
         <a
           className="App-link"
           href="https://playwright.dev/docs/intro"
-          target="_blank"
           rel="noopener noreferrer"
         >
           Learn how to use Playwright

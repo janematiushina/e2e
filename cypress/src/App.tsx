@@ -13,7 +13,6 @@ function App() {
         <a
           className="App-link"
           href="https://docs.cypress.io/app/get-started/why-cypress"
-          target="_blank"
           rel="noopener noreferrer"
         >
           Learn how to use Cypress
